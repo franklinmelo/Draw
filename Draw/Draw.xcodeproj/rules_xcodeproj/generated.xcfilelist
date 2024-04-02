@@ -1,0 +1,3 @@
+$(BAZEL_OUT)/darwin_x86_64-dbg/bin/external/rules_xcodeproj_generated/generator/Draw/xcodeproj/xcodeproj-params/Draw.0.link.params
+$(BAZEL_OUT)/ios_x86_64-dbg-ios-x86_64-min16-applebin_ios-ST-16df6502c7b2/bin/Draw/SwiftLibrary.rules_xcodeproj.swift.compile.params
+$(BAZEL_OUT)/ios_x86_64-dbg-ios-x86_64-min16-applebin_ios-ST-16df6502c7b2/bin/Draw/rules_xcodeproj/Draw/Info.plist

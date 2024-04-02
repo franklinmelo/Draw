@@ -1,0 +1,45 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load(
+    "@rules_xcodeproj//xcodeproj:defs.bzl",
+    "top_level_target",
+    "xcodeproj",
+    "xcode_provisioning_profile",
+)
+
+xcodeproj(
+    name = "xcodeproj",
+    project_name = "Draw",
+    tags = ["manual"],
+    top_level_targets = [
+        top_level_target("//Draw:Draw", target_environments = ["simulator"])
+    ],
+)
+
+
+swift_library(
+    name = "SwiftLibrary",
+    srcs = glob([
+        "*.swift",
+    ]),
+    data = glob([
+        "*.xcassets/**/*",
+        "*.lproj/**/*",
+    ]),
+    module_name = "Draw",
+    tags = ["manual"],
+    visibility = ["//visibility:public"],
+)
+
+ios_application(
+    name = "Draw",
+    bundle_id = "com.franklinmelo.Draw",
+    families = [
+        "iphone",
+        "ipad",
+    ],
+    infoplists = [":Info.plist"],
+    minimum_os_version = "16",
+    visibility = ["//visibility:public"],
+    deps = [":SwiftLibrary"],
+)
