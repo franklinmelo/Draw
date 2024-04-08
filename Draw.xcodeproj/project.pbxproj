@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DACF583B2BBD78A900984570 /* DrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF583A2BBD78A900984570 /* DrawTests.swift */; };
 		DAD183C12A2F495B00335892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD183C02A2F495B00335892 /* AppDelegate.swift */; };
 		DAD183C32A2F495B00335892 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD183C22A2F495B00335892 /* SceneDelegate.swift */; };
 		DAD183C52A2F495B00335892 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD183C42A2F495B00335892 /* ViewController.swift */; };
@@ -14,7 +15,19 @@
 		DAD183CD2A2F495E00335892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD183CB2A2F495E00335892 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DACF583C2BBD78A900984570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD183B52A2F495B00335892 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD183BC2A2F495B00335892;
+			remoteInfo = Draw;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		DACF58382BBD78A900984570 /* DrawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACF583A2BBD78A900984570 /* DrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawTests.swift; sourceTree = "<group>"; };
 		DAD183BD2A2F495B00335892 /* Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD183C02A2F495B00335892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD183C22A2F495B00335892 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +38,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DACF58352BBD78A900984570 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAD183BA2A2F495B00335892 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DACF58392BBD78A900984570 /* DrawTests */ = {
+			isa = PBXGroup;
+			children = (
+				DACF583A2BBD78A900984570 /* DrawTests.swift */,
+			);
+			path = DrawTests;
+			sourceTree = "<group>";
+		};
 		DAD183B42A2F495B00335892 = {
 			isa = PBXGroup;
 			children = (
 				DAD183BF2A2F495B00335892 /* Draw */,
+				DACF58392BBD78A900984570 /* DrawTests */,
 				DAD183BE2A2F495B00335892 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD183BD2A2F495B00335892 /* Draw.app */,
+				DACF58382BBD78A900984570 /* DrawTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +97,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DACF58372BBD78A900984570 /* DrawTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACF583E2BBD78A900984570 /* Build configuration list for PBXNativeTarget "DrawTests" */;
+			buildPhases = (
+				DACF58342BBD78A900984570 /* Sources */,
+				DACF58352BBD78A900984570 /* Frameworks */,
+				DACF58362BBD78A900984570 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DACF583D2BBD78A900984570 /* PBXTargetDependency */,
+			);
+			name = DrawTests;
+			productName = DrawTests;
+			productReference = DACF58382BBD78A900984570 /* DrawTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DAD183BC2A2F495B00335892 /* Draw */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAD183D12A2F495E00335892 /* Build configuration list for PBXNativeTarget "Draw" */;
@@ -91,9 +139,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					DACF58372BBD78A900984570 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = DAD183BC2A2F495B00335892;
+					};
 					DAD183BC2A2F495B00335892 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -113,11 +165,19 @@
 			projectRoot = "";
 			targets = (
 				DAD183BC2A2F495B00335892 /* Draw */,
+				DACF58372BBD78A900984570 /* DrawTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DACF58362BBD78A900984570 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAD183BB2A2F495B00335892 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +190,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DACF58342BBD78A900984570 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACF583B2BBD78A900984570 /* DrawTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAD183B92A2F495B00335892 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +209,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DACF583D2BBD78A900984570 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD183BC2A2F495B00335892 /* Draw */;
+			targetProxy = DACF583C2BBD78A900984570 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DAD183CB2A2F495E00335892 /* LaunchScreen.storyboard */ = {
@@ -154,6 +230,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DACF583F2BBD78A900984570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9MXZLSN4X6;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = franklinmelo.DrawTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Draw.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Draw";
+			};
+			name = Debug;
+		};
+		DACF58402BBD78A900984570 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9MXZLSN4X6;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = franklinmelo.DrawTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Draw.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Draw";
+			};
+			name = Release;
+		};
 		DAD183CF2A2F495E00335892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -190,6 +311,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -250,6 +372,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -325,6 +448,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DACF583E2BBD78A900984570 /* Build configuration list for PBXNativeTarget "DrawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACF583F2BBD78A900984570 /* Debug */,
+				DACF58402BBD78A900984570 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DAD183B82A2F495B00335892 /* Build configuration list for PBXProject "Draw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

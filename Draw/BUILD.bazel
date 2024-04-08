@@ -1,10 +1,10 @@
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
 load(
     "@rules_xcodeproj//xcodeproj:defs.bzl",
     "top_level_target",
-    "xcodeproj",
-    "xcode_provisioning_profile",
+    "xcodeproj"
 )
 
 xcodeproj(
@@ -12,15 +12,21 @@ xcodeproj(
     project_name = "Draw",
     tags = ["manual"],
     top_level_targets = [
-        top_level_target("//Draw:Draw", target_environments = ["simulator"])
+        top_level_target(
+            label = "//Draw:Draw", 
+            target_environments = ["simulator"]
+        ),
+        top_level_target(
+            label = "//DrawTests:DrawTests", 
+            target_environments = ["simulator"]
+        )
     ],
 )
-
 
 swift_library(
     name = "SwiftLibrary",
     srcs = glob([
-        "*.swift",
+        "**/*.swift",
     ]),
     data = glob([
         "*.xcassets/**/*",

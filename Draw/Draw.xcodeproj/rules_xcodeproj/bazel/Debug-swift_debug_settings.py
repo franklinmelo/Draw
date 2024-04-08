@@ -19,6 +19,17 @@ _TRIPLE_MATCH = re.compile(r"([^-]+-[^-]+)(-\D+)[^-]*(-.*)?")
 _SETTINGS = {
 	"x86_64-apple-ios-simulator Draw.app/Draw": {
 		"c": "-iquote$(PROJECT_DIR) -iquote$(PROJECT_DIR)/bazel-out/ios_x86_64-dbg-ios-x86_64-min16-applebin_ios-ST-16df6502c7b2/bin -O0 -DDEBUG=1 -fstack-protector -fstack-protector-all"
+	},
+	"x86_64-apple-ios-simulator DrawTests.xctest/DrawTests": {
+		"c": "-iquote$(PROJECT_DIR) -iquote$(PROJECT_DIR)/bazel-out/ios_x86_64-dbg-ios-x86_64-min16.0-applebin_ios-ST-696cc497c986/bin -O0 -DDEBUG=1 -fstack-protector -fstack-protector-all -iquote$(PROJECT_DIR) -iquote$(PROJECT_DIR)/bazel-out/ios_x86_64-dbg-ios-x86_64-min16.0-applebin_ios-ST-696cc497c986/bin -O0 -fstack-protector -fstack-protector-all",
+		"f": [
+			"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+			"$(SDKROOT)/Developer/Library/Frameworks"
+		],
+		"s": [
+			"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/usr/lib",
+			"$(PROJECT_DIR)/bazel-out/ios_x86_64-dbg-ios-x86_64-min16.0-applebin_ios-ST-696cc497c986/bin/Draw"
+		]
 	}
 }
 
