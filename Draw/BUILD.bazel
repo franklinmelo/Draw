@@ -1,6 +1,5 @@
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
-load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
 load(
     "@rules_xcodeproj//xcodeproj:defs.bzl",
     "top_level_target",
@@ -10,7 +9,6 @@ load(
 xcodeproj(
     name = "xcodeproj",
     project_name = "Draw",
-    tags = ["manual"],
     top_level_targets = [
         top_level_target(
             label = "//Draw:Draw", 
@@ -33,7 +31,6 @@ swift_library(
         "*.lproj/**/*",
     ]),
     module_name = "Draw",
-    tags = ["manual"],
     visibility = ["//visibility:public"],
 )
 
