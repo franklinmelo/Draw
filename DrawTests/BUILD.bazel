@@ -15,6 +15,7 @@ swift_library(
 
 ios_unit_test(
     name = "DrawTests",
+    tags = ["exclusive"],
     minimum_os_version = "16.0",
     test_host = "//Draw:Draw", # fix "Will consider the test as test type Logic Test to run. Because the app under test is not given." Error
     visibility = [
