@@ -23,6 +23,6 @@ jobs:
 
     - name: Build
       run: bazel build //Draw:Draw
-      
+
     - name: Test
-      run: bazel test //DrawTests:DrawTests --test_output=all
+      run: bazel test //DrawTests:DrawTests --test_output=all --cpu=ios_sim_arm64
