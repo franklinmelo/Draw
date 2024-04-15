@@ -17,7 +17,7 @@ swift_library(
 ios_unit_test(
     name = "DrawTests",
     minimum_os_version = "16.0",
-    runner = "@build_bazel_rules_apple//apple/testing/default_runner:ios_xctestrun_random_runner", # 
+    runner = "@build_bazel_rules_apple//apple/testing/default_runner:ios_xctestrun_random_runner", # create a bazel simulator. Is necessary specify arm64 in command line (bazel test //DrawTests:DrawTests --test_output=all --cpu=ios_sim_arm64) 
     # test_host = "//Draw:Draw", # fix "Will consider the test as test type Logic Test to run. Because the app under test is not given." Error
     visibility = [
         "//Draw:__subpackages__", # turn this visible only to Draw subpackages, becouse public can be problems
