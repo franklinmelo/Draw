@@ -28,4 +28,4 @@ jobs:
       run: |
         pgrep Simulator | xargs kill || true
         
-        bazel test //DrawTests:DrawTests --test_output=all --cpu=ios_sim_arm64
+        bazel test //DrawTests:DrawTests --test_output=all --cpu=ios_x86_64
