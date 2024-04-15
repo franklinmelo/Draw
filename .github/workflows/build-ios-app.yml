@@ -25,7 +25,7 @@ jobs:
       run: bazel build //Draw:Draw
 
     - name: Test
-      run: |
+      run: | # --cpu=ios_x86_64 resolve CI problem
         pgrep Simulator | xargs kill || true
         
         bazel test //DrawTests:DrawTests --test_output=all --cpu=ios_x86_64
