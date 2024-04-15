@@ -6,6 +6,7 @@ load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 
 swift_library(
     name = "DrawTestsLibrary",
+    tags = ["manual"],
     testonly = True, # fix "import XCTest" Error in test files
     srcs = glob(["**/*.swift"]),
     deps = [
@@ -16,7 +17,8 @@ swift_library(
 ios_unit_test(
     name = "DrawTests",
     minimum_os_version = "16.0",
-    test_host = "//Draw:Draw", # fix "Will consider the test as test type Logic Test to run. Because the app under test is not given." Error
+    runner = "@build_bazel_rules_apple//apple/testing/default_runner:ios_xctestrun_random_runner", # 
+    # test_host = "//Draw:Draw", # fix "Will consider the test as test type Logic Test to run. Because the app under test is not given." Error
     visibility = [
         "//Draw:__subpackages__", # turn this visible only to Draw subpackages, becouse public can be problems
         "@rules_xcodeproj//xcodeproj:generated", #turn this tests visible do xcodeproj top_level_targets
